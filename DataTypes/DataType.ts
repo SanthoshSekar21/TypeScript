@@ -85,8 +85,10 @@ enum Direction{
     left,
     right
 }
+
 let move:Direction=Direction.up;
 console.log(move);
+
 //-----any -----------
 //The any type allow a varaibe to hold any types of values
 //It disable type checking for that variable
