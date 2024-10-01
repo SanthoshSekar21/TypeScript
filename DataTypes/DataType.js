@@ -45,7 +45,7 @@ var emptyValue = null;
 console.log(emptyValue); // Outputs: null
 //------Symbol DataType-----
 //Symbol is used to create unique identifier for an object
-var sym1 = Symbol(); // Symbol with no description
+var sym1 = Symbol('id'); // Symbol with no description
 var sym2 = Symbol("identifier"); // Symbol with a description "identifier"
 console.log(sym1); // Outputs: Symbol()
 console.log(sym2); // Outputs: Symbol(identifier)
@@ -55,6 +55,29 @@ var bigNumber1 = 9007199254740991n; // Using the `n` suffix
 var bigNumber2 = BigInt(9007199254740991); // Using the `BigInt()` function
 console.log(bigNumber1); // Outputs: 9007199254740991n
 console.log(bigNumber2); // Outputs: 9007199254740991n
+//------Array-------------
+//Array hold a collection of values same types in Typescript you can declare using two methds
+//using square brackets type[]
+//using Array<type> syntax
+var numbers = [1, 2, 3, 4, 5, 6];
+var username = ['santhosh', 'sathish', 'kumar'];
+console.log(numbers);
+console.log(username);
+//-------Tuple-------------
+//Tuples allow you to define an array with a fixed numbers of elements,where each element can have a different type
+var person1 = ['santhosh', 21];
+console.log(person1);
+//------------Enum-------------
+//Enum ara a way of defining named constant which makes your code more readable and maintainable
+var Direction;
+(function (Direction) {
+    Direction[Direction["up"] = 1] = "up";
+    Direction[Direction["down"] = 2] = "down";
+    Direction[Direction["left"] = 3] = "left";
+    Direction[Direction["right"] = 4] = "right";
+})(Direction || (Direction = {}));
+var move = Direction.up;
+console.log(move);
 //-----any -----------
 //The any type allow a varaibe to hold any types of values
 //It disable type checking for that variable

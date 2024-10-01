@@ -50,7 +50,7 @@ console.log(emptyValue); // Outputs: null
 
 //------Symbol DataType-----
 //Symbol is used to create unique identifier for an object
-let sym1 = Symbol();               // Symbol with no description
+let sym1 = Symbol('id');               // Symbol with no description
 let sym2 = Symbol("identifier");   // Symbol with a description "identifier"
 
 console.log(sym1); // Outputs: Symbol()
@@ -63,6 +63,30 @@ let bigNumber2: bigint = BigInt(9007199254740991); // Using the `BigInt()` funct
 console.log(bigNumber1); // Outputs: 9007199254740991n
 console.log(bigNumber2); // Outputs: 9007199254740991n
 
+//------Array-------------
+//Array hold a collection of values same types in Typescript you can declare using two methds
+//using square brackets type[]
+//using Array<type> syntax
+let numbers:number[]=[1,2,3,4,5,6];
+let username:Array<string>=['santhosh','sathish','kumar'];
+console.log(numbers);
+console.log(username);
+
+//-------Tuple-------------
+//Tuples allow you to define an array with a fixed numbers of elements,where each element can have a different type
+let person1:[string,number]=['santhosh',21];
+console.log(person1);
+
+//------------Enum-------------
+//Enum ara a way of defining named constant which makes your code more readable and maintainable
+enum Direction{
+    up=1,
+    down,
+    left,
+    right
+}
+let move:Direction=Direction.up;
+console.log(move);
 //-----any -----------
 //The any type allow a varaibe to hold any types of values
 //It disable type checking for that variable
