@@ -120,4 +120,40 @@ abstract class Shape {
   
   let circle = new Circle(5);
   circle.printArea();  // Outputs: The area is 78.53981633974483
-  
+
+  //Getter and Setter methods
+  // Getters and Setters allow encapsulating the internal state of a class while still providing access to read and update it. 
+  // They look like regular properties but use the get and set keywords.
+  class User {
+  private _username: string;
+
+  get username(): string {
+    return this._username;
+  }
+
+  set username(name: string) {
+    if (name.length > 3) {
+      this._username = name;
+    } else {
+      console.log("Username must be at least 4 characters long.");
+    }
+  }
+}
+
+let user = new User();
+user.username = "Sam";      // Output: Username must be at least 4 characters long.
+user.username = "Samuel";   // Valid
+console.log(user.username); // Output: Samuel
+//Static Properties and Methods
+// Static members belong to the class itself rather than to instances of the class. 
+// They are accessed using the class name.
+class MathHelper {
+  static pi: number = 3.14;
+
+  static circleArea(radius: number): number {
+    return this.pi * radius * radius;
+  }
+}
+
+console.log(MathHelper.pi);               // Output: 3.14
+console.log(MathHelper.circleArea(5));     // Output: 78.5

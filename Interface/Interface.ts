@@ -32,6 +32,7 @@ interface Car {
     model: "Camry",
   };
   
+
   console.log(myCar);  // Outputs: { make: "Toyota", model: "Camry" }
 //   Read-Only Properties
 // You can specify that some properties of an interface should not be modified
@@ -109,3 +110,37 @@ interface Animal {
   console.log(myDog.name);  // Outputs: Buddy
   console.log(myDog.sound());  // Outputs: Woof!
   
+//Index Signature
+//Index signatures are used when you don’t know all the property names beforehand, allowing you to define an interface for objects that have dynamic keys.
+interface Salary {
+  [employeeName: string]: number;
+}
+
+let salaries: Salary = {
+  John: 50000,
+  Jane: 55000,
+  "Bill Gates": 1000000
+};
+
+console.log(salaries["Bill Gates"]); // Output: 1000000
+//Extending Interfaces
+// TypeScript allows interfaces to inherit properties from other interfaces using the extends keyword. 
+// This feature is used for extending existing interfaces, thereby reusing code
+
+interface Animalss {
+  name: string;
+  sound1: string;
+}
+
+interface Dogg extends Animalss {
+  breed: string;
+}
+
+let Dogs: Dogg = {
+  name: "Max",
+  sound1: "Bark",
+  breed: "Labrador",
+  
+};
+
+console.log(Dogs);  // Output: { name: 'Max', sound: 'Bark', breed: 'Labrador' }
