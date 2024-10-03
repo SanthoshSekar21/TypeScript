@@ -48,3 +48,7 @@ var divide = function (x, y) {
     return x / y;
 };
 console.log(divide(10, 2)); // Outputs: 5
+var f3 = function () {
+    console.log('this is annonymus');
+};
+f3();

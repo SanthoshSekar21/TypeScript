@@ -40,3 +40,15 @@ var Dog = /** @class */ (function () {
 var myDog = new Dog("Buddy", 3);
 console.log(myDog.name); // Outputs: Buddy
 console.log(myDog.sound()); // Outputs: Woof!
+var salaries = {
+    John: 50000,
+    Jane: 55000,
+    "Bill Gates": 1000000
+};
+console.log(salaries["Bill Gates"]); // Output: 1000000
+var Dogs = {
+    name: "Max",
+    sound1: "Bark",
+    breed: "Labrador",
+};
+console.log(Dogs); // Output: { name: 'Max', sound: 'Bark', breed: 'Labrador' }

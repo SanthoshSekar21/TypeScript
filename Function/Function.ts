@@ -53,4 +53,9 @@ const divide = (x: number, y: number): number => {
 };
 
 console.log(divide(10, 2)); // Outputs: 5
+//Annonymus Function
+const f3= function():void{
+    console.log('this is annonymus');
+};
+f3();
 
