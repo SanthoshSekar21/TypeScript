@@ -1,0 +1,22 @@
+Encapsulation is one of the fundamental principles of object-oriented programming (OOP), and TypeScript supports this concept well. It involves bundling the data (attributes) and methods (functions) that operate on the data into a single unit, typically a class. Additionally, encapsulation restricts direct access to some of the object’s components, which is crucial for preventing unintended interference and misuse.
+
+Key Concepts of Encapsulation in TypeScript
+---------------------------------------------
+Access Modifiers: TypeScript provides three access modifiers to control access to class members:
+
+----------public: ----------------
+Members are accessible from anywhere.
+ -------- private:---------
+ Members are accessible only within the class itself.
+----------protected:------------
+ Members are accessible within the class and by subclasses.
+
+----------Getters and Setters:------- 
+These are special methods to access and modify private or protected properties. They provide a controlled way to interact with the properties of a class.
+
+Benefits of Encapsulation
+----------------------------
+
+Control: You can control how data is accessed and modified.
+Flexibility and Maintenance: Changes to the implementation can be made without affecting external code that uses the class.
+Increased Security: Sensitive data can be hidden from the outside world.
