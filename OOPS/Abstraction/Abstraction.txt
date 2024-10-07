@@ -1,0 +1,52 @@
+Abstraction is one of the core principles of object-oriented programming (OOP), alongside inheritance, encapsulation, and polymorphism. 
+It allows developers to focus on what an object does rather than how it does it. 
+By using abstraction, you hide the implementation details and show only the essential features of an object, which simplifies code usage and helps manage complexity.
+
+Key Concepts of Abstraction:
+-----------------------------
+Hiding Complexity: It hides the complex implementation logic of a class from the outside world.
+-----------------
+Exposing Essentials: Only essential functionalities are exposed to the user, making the interface of the class simpler and easier to understand.
+------------------
+Achieving Abstraction: In TypeScript, abstraction can be achieved using:
+---------------------
+                         Abstract Classes.
+                         Interfaces.
+
+1. Abstract Classes
+------------------
+An abstract class is a class that cannot be instantiated directly. 
+It serves as a blueprint for other classes. Abstract classes can define both abstract methods (methods without implementation) and concrete methods (methods with implementation).
+
+Characteristics of Abstract Classes:
+------------------------------------
+You define an abstract class using the abstract keyword.
+Abstract classes can have regular properties and methods.
+They can include abstract methods, which have no implementation in the abstract class and must be implemented in the derived classes.
+Abstract classes can be extended by other classes using the extends keyword.
+
+2.Interface
+-------------
+An interface is a more flexible way to achieve abstraction in TypeScript. 
+Unlike abstract classes, an interface only defines the structure of a class, without any implementation details. 
+Classes can implement multiple interfaces, making this approach more versatile than using abstract classes alone.
+
+Characteristics of Interfaces:
+------------------------------
+Defines a contract for the structure that a class must adhere to.
+Cannot have any implementation (only method and property signatures).
+Can be used to define multiple types that a class must follow.
+Classes use the implements keyword to adhere to an interface.
+
+When to Use Abstract Classes vs. Interfaces
+------------------------------------------
+Abstract Classes:
+----------------
+Use when you want to share common behavior or implementation across multiple classes.
+Useful when you want to define non-abstract methods that subclasses can inherit.
+Suitable when there is a strict parent-child relationship.
+Interfaces:
+-----------
+Use when you want to define a contract for a class without enforcing a specific hierarchy.
+Useful for creating a flexible structure that can be implemented by multiple, unrelated classes.
+Can be used to create polymorphic behaviors across different classes.
